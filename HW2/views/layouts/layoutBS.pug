@@ -1,0 +1,24 @@
+head
+    title  HW2CSC3700
+    link(href='/css/bootstrap.css' rel='stylesheet')
+    link(href='/css/main.css' rel='stylesheet')
+    script(src='/js/bootstrap.js' type='application/javascript')
+// Navigation
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.static-top
+    .container
+        img(src='imgs/personalityLogo.png')
+        header.bg-dark PersonalityPerfect
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.ms-auto
+                li.nav-item
+                    if from == 'survey'
+                        a.nav-link(href='/survey') Survey
+                    else
+                        a.nav-link(href='/survey') Survey
+                li.nav-item
+                    if from == 'about'
+                        a.nav-link(href='/about') About
+                    else
+                        a.nav-link(href='/about') About
