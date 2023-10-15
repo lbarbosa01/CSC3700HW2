@@ -16,7 +16,7 @@ app.get('*', function(req, res){
     let pt = "Page Not Found!";
     res.render('notFound', {
         pageTitle: pt,
-        subTitle: "Sorry, this page is not found. Please click the home button above."
+        subTitle: "Sorry, this page was not found. Please click the home button above."
     });
 });
 
