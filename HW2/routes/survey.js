@@ -1,16 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
-const adminData = require("./admin");
+const dataController = require("../controllers/surveyDataController");
 
-router.get( '/surveyResults', (req, res, next ) => {
-    console.log("----------------");
-    console.log(adminData.products);
-    res.render( 'surveyResults', {
-        title: "Survey Results",
-        from: 'surveyResults',
-        products: adminData.products
-    });
-});
+router.get( '/survey', dataController.getQuery);  // for controller
+router.post( '/data', dataController.postData );
+router.get('/about', dataController.getAbout);
+router.get( '/surveyResults', dataController.getResults);
 
 module.exports = router;
